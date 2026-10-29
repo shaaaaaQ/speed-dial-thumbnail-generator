@@ -1,0 +1,86 @@
+/* SMUI全体に共通する調整。画面固有の指定はコンポーネント側に置く。 */
+.mdc-button {
+    white-space: nowrap;
+}
+
+.mdc-icon-button {
+    color: var(--muted);
+}
+
+.mdc-icon-button svg {
+    display: block;
+    margin: auto;
+}
+
+.mdc-button:disabled {
+    color: var(--muted);
+    opacity: 0.5;
+}
+
+.mdc-button--unelevated:disabled {
+    background: var(--divider);
+}
+
+.mdc-text-field {
+    width: 100%;
+    min-width: 0;
+    height: 48px;
+}
+
+.mdc-text-field__input {
+    min-width: 0;
+    width: 100%;
+}
+
+/* bare.cssの状態別スタイルにも、アプリの明暗テーマを適用する。 */
+.mdc-text-field__input,
+.mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__input {
+    color: var(--text);
+}
+
+.mdc-floating-label,
+.mdc-text-field__affix,
+.mdc-text-field:not(.mdc-text-field--disabled) .mdc-floating-label,
+.mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__affix {
+    color: var(--muted);
+}
+
+.mdc-text-field--disabled {
+    opacity: 0.5;
+}
+
+.mdc-text-field--disabled .mdc-text-field__input {
+    color: var(--muted);
+}
+
+.mdc-text-field :is(.mdc-notched-outline__leading, .mdc-notched-outline__notch, .mdc-notched-outline__trailing),
+.mdc-text-field--outlined:not(.mdc-text-field--disabled)
+    :is(.mdc-notched-outline__leading, .mdc-notched-outline__notch, .mdc-notched-outline__trailing) {
+    border-color: var(--divider);
+}
+
+.mdc-text-field:not(.mdc-text-field--disabled):hover .mdc-notched-outline > span,
+.mdc-text-field--outlined:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):hover
+    .mdc-notched-outline :is(.mdc-notched-outline__leading, .mdc-notched-outline__notch, .mdc-notched-outline__trailing) {
+    border-color: var(--muted);
+}
+
+.mdc-text-field.mdc-text-field--focused .mdc-notched-outline > span,
+.mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--focused
+    :is(.mdc-notched-outline__leading, .mdc-notched-outline__notch, .mdc-notched-outline__trailing) {
+    border-color: var(--primary);
+}
+
+.mdc-text-field.mdc-text-field--focused .mdc-floating-label,
+.mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {
+    color: var(--primary);
+}
+
+.mdc-form-field > label {
+    color: var(--text);
+}
+
+.mdc-checkbox .mdc-checkbox__native-control:enabled:not(:checked):not(:indeterminate)
+    ~ .mdc-checkbox__background {
+    border-color: var(--muted);
+}

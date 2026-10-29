@@ -1,0 +1,13 @@
+import { mount } from "svelte";
+import App from "./App.svelte";
+import "../node_modules/@smui/button/bare.css";
+import "../node_modules/@smui/icon-button/bare.css";
+import "../node_modules/@smui/textfield/bare.css";
+import "../node_modules/@smui/slider/bare.css";
+import "../node_modules/@smui/checkbox/bare.css";
+import "../node_modules/@smui/form-field/bare.css";
+import "./styles/theme.css";
+import "./styles/base.css";
+import "./styles/shared.css";
+import "./styles/smui.css";
+mount(App, { target: document.getElementById("app")! });

@@ -1,0 +1,62 @@
+:root {
+    font-family: Roboto, Arial, "Noto Sans JP", "Yu Gothic", sans-serif;
+    font-synthesis: none;
+    --bg: #fafafa;
+    --surface: #fff;
+    --text: #212121;
+    --muted: #616161;
+    --divider: #e0e0e0;
+    --primary: #1976d2;
+    --selected: #e3f2fd;
+    --stage: #eeeeee;
+    --error: #b3261e;
+    --mdc-theme-primary: var(--primary);
+    --mdc-theme-secondary: var(--primary);
+    --mdc-theme-surface: var(--surface);
+    --mdc-theme-background: var(--bg);
+    --mdc-theme-on-surface: var(--text);
+    --mdc-theme-on-primary: #fff;
+    --mdc-theme-on-secondary: #fff;
+    --mdc-theme-error: var(--error);
+    --mdc-outlined-button-outline-color: var(--divider);
+    --mdc-outlined-button-disabled-outline-color: var(--divider);
+    --mdc-theme-text-primary-on-background: var(--text);
+    --mdc-theme-text-secondary-on-background: var(--muted);
+    --mdc-typography-font-family:
+    Roboto, Arial, "Noto Sans JP", "Yu Gothic", sans-serif;
+    --mdc-typography-button-text-transform: none;
+    --mdc-typography-button-letter-spacing: 0.02em;
+    color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+    --bg: #121212;
+    --surface: #1e1e1e;
+    --text: #eee;
+    --muted: #b0b0b0;
+    --divider: #424242;
+    --primary: #90caf9;
+    --selected: #19354c;
+    --stage: #171717;
+    --error: #f2b8b5;
+    --mdc-theme-on-primary: #10273a;
+    --mdc-theme-on-secondary: #10273a;
+    color-scheme: dark;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]):not([data-theme="dark"]) {
+        --bg: #121212;
+        --surface: #1e1e1e;
+        --text: #eee;
+        --muted: #b0b0b0;
+        --divider: #424242;
+        --primary: #90caf9;
+        --selected: #19354c;
+        --stage: #171717;
+        --error: #f2b8b5;
+        --mdc-theme-on-primary: #10273a;
+        --mdc-theme-on-secondary: #10273a;
+        color-scheme: dark;
+    }
+}

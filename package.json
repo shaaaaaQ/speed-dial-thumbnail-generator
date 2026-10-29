@@ -1,0 +1,35 @@
+{
+    "name": "speed-dial-thumbnail-generator",
+    "version": "1.0.0",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "vite --host 0.0.0.0",
+        "build": "svelte-check --tsconfig ./tsconfig.json && vite build",
+        "preview": "vite preview --host 0.0.0.0",
+        "predev": "node scripts/generate-licenses.mjs",
+        "prebuild": "node scripts/generate-licenses.mjs",
+        "check": "svelte-check --tsconfig ./tsconfig.json",
+        "test": "node tests/regressions.test.mjs"
+    },
+    "dependencies": {
+        "@mdi/js": "^7.4.47",
+        "@smui/button": "^9.0.6",
+        "@smui/checkbox": "^9.0.6",
+        "@smui/form-field": "^9.0.6",
+        "@smui/icon-button": "^9.0.6",
+        "@smui/slider": "^9.0.6",
+        "@smui/textfield": "^9.0.6",
+        "dompurify": "^3.4.17",
+        "fflate": "^0.8.3",
+        "svelte": "^5.57.3"
+    },
+    "devDependencies": {
+        "@sveltejs/vite-plugin-svelte": "^7.3.1",
+        "svelte-check": "^4.7.7",
+        "typescript": "^6.0.3",
+        "vite": "^8.3.5"
+    },
+    "license": "MIT-0",
+    "packageManager": "pnpm@11.25.0"
+}

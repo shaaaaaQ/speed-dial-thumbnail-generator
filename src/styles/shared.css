@@ -1,0 +1,47 @@
+.panel {
+    background: var(--surface);
+    border-radius: 4px;
+    box-shadow: 0 1px 3px #00000026;
+    min-width: 0;
+    overflow: hidden;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 20px 16px;
+    min-height: 64px;
+}
+
+h2 {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.error-text {
+    color: var(--error) !important;
+}
+
+@media (max-width: 1180px) {
+    .section-heading {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
+@media (max-width: 640px) {
+    .panel {
+        width: 100%;
+    }
+
+    .section-heading {
+        min-height: 60px;
+        padding: 16px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+}
